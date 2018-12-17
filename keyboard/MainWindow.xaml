@@ -1,0 +1,115 @@
+﻿<Window x:Class="keyboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keyboard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="360" Width="1024" BorderThickness="0,2,2,2" BorderBrush="#CC333333" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" Background="#CC333333" ResizeMode="NoResize" MouseMove="MoveWindow">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Style="{DynamicResource MinButtonStyle}" Click="MiniApp"></Button>
+                <Button Grid.Column="2" Style="{DynamicResource CloseButtonStyle}" Click="ExitApp"></Button>
+            </Grid>
+        </DockPanel>
+        <DockPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Row="0">
+                    <Button Content="ESC" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="EscKey"></Button>
+                    <Button Content="~&#x000A;`" Width="60" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="!&#x000A;1" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="@&#x000A;2" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="#&#x000A;3" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="$&#x000A;4" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="%&#x000A;5" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="^&#x000A;6" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="&amp;&#x000A;7" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="*&#x000A;8" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="(&#x000A;9" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content=")&#x000A;0" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="—&#x000A;-" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="+&#x000A;=" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="←" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="BackSpaceKey"></Button>
+                </DockPanel>
+                <DockPanel Grid.Row="1">
+                    <Button Content="Tab" Width="90" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="TabKey"></Button>
+                    <Button Content="Q" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="W" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="E" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="R" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="T" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="Y" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="U" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="I" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="O" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="P" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="[&#x000A;{" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="]&#x000A;}" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="|&#x000A;\" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="del" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="DelKey"></Button>
+                </DockPanel>
+                <DockPanel Grid.Row="2">
+                    <Button Content="CapsLock" Width="120" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="CapsKey"></Button>
+                    <Button Content="A" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="S" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="D" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="F" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="G" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="H" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="J" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="K" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="L" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content=": &#x000A;;" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="&quot;&#x000A;&apos;" Style="{DynamicResource KeyboardWordButtonStyle}"></Button>
+                    <Button Content="Enter" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="EnterKey"></Button>
+                </DockPanel>
+                <DockPanel Grid.Row="3">
+                    <Button Content="Shift" Width="150" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="ShiftKey" MouseDoubleClick="ShiftGroup"></Button>
+                    <Button Content="Z" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="X" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="C" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="V" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="B" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="N" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="M" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="&lt; &#x000A; ," Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="&gt; &#x000A; ." Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="? &#x000A; /" Style="{DynamicResource KeyboardWordButtonStyle}" Click="SendKey"></Button>
+                    <Button Content="↑" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="UpKey"></Button>
+                    <Button Content="Shift" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="ShiftKey" MouseDoubleClick="ShiftGroup"></Button>
+                </DockPanel>
+                <DockPanel Grid.Row="4">
+                    <Button Content="Fn" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}"></Button>
+                    <Button Content="Ctrl" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="CtrlKey" MouseDoubleClick="CtrlGroup"></Button>
+                    <Button Content="Windows" Width="60" Style="{DynamicResource WinButtonStyle}" Click="WinKey"></Button>
+                    <Button Content="Alt" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="AltKey" MouseDoubleClick="AltGroup"></Button>
+                    <Button Content="Space" Width="342" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="SpaceKey"></Button>
+                    <Button Content="Alt" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="AltKey" MouseDoubleClick="AltGroup"></Button>
+                    <Button Content="Windows" Width="60" Style="{DynamicResource WinButtonStyle}" Click="WinKey"></Button>
+                    <Button Content="←" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="LeftKey"></Button>
+                    <Button Content="↓" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="DownKey"></Button>
+                    <Button Content="→" Width="60" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="RightKey"></Button>
+                    <Button Content="Ctrl" Style="{DynamicResource KeyboardPowerButtonStyle}" Click="CtrlKey" MouseDoubleClick="CtrlGroup"></Button>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
+

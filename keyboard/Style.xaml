@@ -1,0 +1,260 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:keyboard">
+    <Style x:Key="ButtonFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Rectangle Margin="2" StrokeThickness="1" Stroke="#60000000" StrokeDashArray="1 2"></Rectangle>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Closed Button Template -->
+    <ControlTemplate x:Key="CloseButtonTemplate" TargetType="Button">
+        <Border TextBlock.Foreground="{TemplateBinding Foreground}" x:Name="Border" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+            </Border.Background>
+            <Path SnapsToDevicePixels="False" Stroke="{TemplateBinding Property=Foreground}" StrokeThickness="3"  Data="M0,0 L20,20 M0,20 L20,0" HorizontalAlignment="Center" VerticalAlignment="Center"></Path>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"></VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="#FFCCCCCC" To="#FFCCCCCC">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Border>
+    </ControlTemplate>
+
+    <!-- Max Button Template -->
+    <ControlTemplate x:Key="MaxButtonTemplate" TargetType="Button">
+        <Border TextBlock.Foreground="{TemplateBinding Foreground}" x:Name="Border" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+            </Border.Background>
+            <Path SnapsToDevicePixels="False" Stroke="{TemplateBinding Property=Foreground}" StrokeThickness="3"  Data="M0,0 L20,0 L20,20 L0 20 Z" HorizontalAlignment="Center" VerticalAlignment="Center"></Path>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"></VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="#FFCCCCCC" To="#FFCCCCCC">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Border>
+    </ControlTemplate>
+
+    <!-- Min Button Template -->
+    <ControlTemplate x:Key="MinButtonTemplate" TargetType="Button">
+        <Border TextBlock.Foreground="{TemplateBinding Foreground}" x:Name="Border" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+            </Border.Background>
+            <Path SnapsToDevicePixels="False" Stroke="{TemplateBinding Property=Foreground}" StrokeThickness="3"  Data="M0,0 L20 0" HorizontalAlignment="Center" VerticalAlignment="Center"></Path>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"></VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="#FFCCCCCC" To="#FFCCCCCC">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Border>
+    </ControlTemplate>
+
+    <!-- Keyboard Button Template -->
+    <ControlTemplate x:Key="KeyboardButtonTemplate" TargetType="Button">
+        <Border x:Name="Border" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="{TemplateBinding Background}" Background="{TemplateBinding Background}">
+            <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"></VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#66FFFFFF" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="#FFCCCCCC" To="#FFCCCCCC">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Border>
+    </ControlTemplate>
+
+    <!-- Windows Button Template-->
+    <ControlTemplate x:Key="WindowsButtonTemplate" TargetType="Button">
+        <Border x:Name="Border" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="{TemplateBinding Background}" Background="{TemplateBinding Background}">
+            <Path Data="M0 5 L15 2.5 L15 15  L0 15 Z M0 16 L15 16 L15 27.5 L0 25 Z M16 2.5 L30 0 L30 15 L16 15 Z M16 16 L30 16 L30 30 L16 27.5Z" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="#FFFFFFFF"></Path>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"></VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#66FFFFFF" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="{x:Null}" To="#FF990033" Duration="0:0:0.5">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" From="#FFCCCCCC" To="#FFCCCCCC">
+                            </ColorAnimation>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Border>
+    </ControlTemplate>
+
+    <!-- Button -->
+    <Style x:Key="CloseButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true"></Setter>
+        <Setter Property="OverridesDefaultStyle" Value="true"></Setter>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"></Setter>
+        <Setter Property="Width" Value="40"></Setter>
+        <Setter Property="Height" Value="40"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="Template" Value="{DynamicResource CloseButtonTemplate}"></Setter>
+    </Style>
+
+    <Style x:Key="MaxButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true"></Setter>
+        <Setter Property="OverridesDefaultStyle" Value="true"></Setter>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"></Setter>
+        <Setter Property="Width" Value="40"></Setter>
+        <Setter Property="Height" Value="40"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Template" Value="{DynamicResource MaxButtonTemplate}"></Setter>
+    </Style>
+
+    <Style x:Key="MinButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true"></Setter>
+        <Setter Property="OverridesDefaultStyle" Value="true"></Setter>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"></Setter>
+        <Setter Property="Width" Value="40"></Setter>
+        <Setter Property="Height" Value="40"></Setter>
+        <Setter Property="Margin" Value="0"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+        <Setter Property="Template" Value="{DynamicResource MinButtonTemplate}"></Setter>
+    </Style>
+
+    <Style x:Key="WinButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true"></Setter>
+        <Setter Property="OverridesDefaultStyle" Value="true"></Setter>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"></Setter>
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+        <Setter Property="Background" Value="#1AFFFFFF"></Setter>
+        <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="Template" Value="{DynamicResource WindowsButtonTemplate}"></Setter>
+    </Style>
+
+    <Style x:Key="KeyboardWordButtonStyle" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels" Value="true"></Setter>
+        <Setter Property="OverridesDefaultStyle" Value="true"></Setter>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"></Setter>
+        <Setter Property="Width" Value="60"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+        <Setter Property="Background" Value="#2FFFFFFF"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Template" Value="{DynamicResource KeyboardButtonTemplate}"></Setter>
+    </Style>
+
+    <Style x:Key="KeyboardPowerButtonStyle" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels" Value="true"></Setter>
+        <Setter Property="OverridesDefaultStyle" Value="true"></Setter>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"></Setter>
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+        <Setter Property="Background" Value="#1AFFFFFF"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Template" Value="{DynamicResource KeyboardButtonTemplate}"></Setter>
+    </Style>
+</ResourceDictionary>

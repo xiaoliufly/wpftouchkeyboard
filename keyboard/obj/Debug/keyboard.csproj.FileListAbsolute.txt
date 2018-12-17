@@ -1,0 +1,17 @@
+D:\Document\keyboard\keyboard\bin\Debug\keyboard.exe.config
+D:\Document\keyboard\keyboard\bin\Debug\keyboard.exe
+D:\Document\keyboard\keyboard\bin\Debug\keyboard.pdb
+D:\Document\keyboard\keyboard\obj\Debug\keyboard.csprojAssemblyReference.cache
+D:\Document\keyboard\keyboard\obj\Debug\MainWindow.g.cs
+D:\Document\keyboard\keyboard\obj\Debug\App.g.cs
+D:\Document\keyboard\keyboard\obj\Debug\keyboard_MarkupCompile.cache
+D:\Document\keyboard\keyboard\obj\Debug\keyboard_MarkupCompile.lref
+D:\Document\keyboard\keyboard\obj\Debug\MainWindow.baml
+D:\Document\keyboard\keyboard\obj\Debug\keyboard.g.resources
+D:\Document\keyboard\keyboard\obj\Debug\keyboard.Properties.Resources.resources
+D:\Document\keyboard\keyboard\obj\Debug\keyboard.csproj.GenerateResource.cache
+D:\Document\keyboard\keyboard\obj\Debug\keyboard.csproj.CoreCompileInputs.cache
+D:\Document\keyboard\keyboard\obj\Debug\keyboard.exe
+D:\Document\keyboard\keyboard\obj\Debug\keyboard.pdb
+D:\Document\keyboard\keyboard\obj\Debug\App.baml
+D:\Document\keyboard\keyboard\obj\Debug\Style.baml
